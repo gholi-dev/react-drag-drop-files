@@ -104,6 +104,7 @@ const FileUploader: React.FC<Props> = (props: Props): JSX.Element => {
     onDrop,
     disabled,
     label,
+    onlyDirectory,
   } = props;
   const labelRef = useRef<HTMLLabelElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -161,6 +162,7 @@ const FileUploader: React.FC<Props> = (props: Props): JSX.Element => {
         type="file"
         name={name}
         disabled={disabled}
+        webkitdirectory={onlyDirectory}
       />
       {dragging && (
         <HoverMsg>
