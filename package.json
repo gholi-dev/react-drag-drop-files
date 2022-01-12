@@ -1,10 +1,9 @@
 {
-  "name": "react-drag-drop-files",
+  "name": "@liara/react-drag-drop-files",
   "version": "2.2.4",
   "description": "Light React Drag & Drop files and images library styled by styled-components",
   "author": "Karim <karimmokhtar28@gmail.com>",
   "license": "MIT",
-  "private": false,
   "main": "dist/react-drag-drop-files.cjs.js",
   "module": "dist/react-drag-drop-files.esm.js",
   "types": "dist/react-drag-drop-files.d.ts",
@@ -15,7 +14,7 @@
     "start-playground": "cd playground && npm run start",
     "install-all": "yarn install && cd playground && npm i",
     "dev": "npm-run-all --parallel build-watch start-playground",
-    "deploy:npm": "yarn run build && npm publish",
+    "deploy:npm": "yarn run build && npm publish --access=public",
     "lint:check": "eslint --ext .ts --ext .tsx .",
     "test": "jest"
   },

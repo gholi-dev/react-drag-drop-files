@@ -16,6 +16,7 @@ type Props = {
   minSize?: number;
   file?: File | null;
   disabled?: boolean | false;
+  onlyDirectory?: boolean | false;
   label?: string | undefined;
   onSizeError?: (arg0: string) => void;
   onDrop?: (arg0: File) => void;
@@ -162,6 +163,7 @@ const FileUploader: React.FC<Props> = (props: Props): JSX.Element => {
         type="file"
         name={name}
         disabled={disabled}
+        // @ts-ignore
         webkitdirectory={onlyDirectory}
       />
       {dragging && (
